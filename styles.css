@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Poppins:wght@500&family=Rampart+One&family=Rubik&family=Tilt+Warp&display=swap");
+
+:root {
+  --gradient: linear-gradient(45deg, #37306b, #5e1e7f, #891767, #991e32);
+  --gradient-2: linear-gradient(
+    45deg,
+    rgb(54, 47, 106),
+    #d27685,
+    #9e4784,
+    #66347f,
+    #9e4784
+  );
+}
+
+.bmi-logo {
+  margin-top: 5px;
+  width: 45px;
+  height: 45px;
+}
+
+.btn {
+  border: none;
+}
+
+@keyframes bg-animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+h1 {
+  font-family: "Golos Text", sans-serif;
+}
+
+.bi-calculator {
+  padding-left: 10px;
+  width: 55px;
+  height: 55px;
+}
+
+.bmi-header {
+  color: #37306b;
+  padding-top: 20px;
+  font-family: "Golos Text", sans-serif;
+}
+
+.input-1-margin {
+  padding-top: 20px;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.output-container {
+  border-radius: 7px;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  background-image: var(--gradient);
+  background-size: 500%;
+  animation: bg-animate 5s infinite alternate;
+}
+
+.btn {
+  background-image: var(--gradient);
+  background-size: 500%;
+}
+
+.btn:hover {
+  animation: bg-animate 0.7s infinite alternate;
+}
+
+.result-header {
+  padding: 5px 5px;
+  color: white;
+  font-size: 2rem;
+}
+
+.result-output {
+  color: white;
+  font-size: 3rem;
+}
+
+.logo-font {
+  font-weight: 500;
+  font-family: "Golos Text", sans-serif;
+}
+
+.you-are-header {
+  display: inline;
+  color: rgb(255, 255, 255);
+  font-size: 2.4rem;
+}
+
+.health-result {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+
+.health-container {
+  padding: 10px 20px 20px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  background-image: var(--gradient);
+  background-size: 500%;
+  animation: bg-animate 5s infinite alternate;
+}
+
+.here-is-style {
+  padding-top: 30px;
+}
+
+.display-4:nth-last-of-type(2) {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.display-4:nth-last-of-type(1) {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.result-grid {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-right: 2px solid rgba(54, 47, 106, 0.7);
+  border-bottom: 2px solid rgba(54, 47, 106, 0.7);
+}
+
+.result-grid:nth-last-of-type(1) {
+  border-right: none;
+  border-bottom: none;
+}
+
+.result-grid:nth-last-of-type(2) {
+  border-bottom: none;
+}
+
+.result-grid:nth-last-of-type(3) {
+  border-right: none;
+}
+
+.about-you-style {
+  padding-bottom: 28px;
+}
+
+.formula-header {
+  padding-top: 60px;
+  color: #3a3277;
+  font-family: "Golos Text", sans-serif;
+  font-size: 3.5rem;
+  color: transparent;
+  background-clip: text;
+  background-image: var(--gradient);
+  background-size: 500%;
+  animation: bg-animate 3s infinite alternate;
+}
+
+.formula-step-header {
+  font-weight: 300;
+}
+
+.formula-style {
+  padding-top: 20px;
+}
+
+.formula-calc {
+  padding: 10px 0px 15px 15px;
+  background-color: rgba(104, 104, 104, 0.1);
+  border-radius: 7px;
+}
+
+.formula-calc-1 {
+  padding-bottom: 30px;
+  background-color: none;
+}
+
+.formula-container {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 765px) {
+  .result-grid:nth-last-of-type(1) {
+    border-right: none;
+  }
+  .result-grid:nth-last-of-type(2) {
+    border-right: none;
+    border-bottom: 2px solid rgba(54, 47, 106, 0.7);
+  }
+  .result-grid:nth-last-of-type(3) {
+    border-right: none;
+    border-bottom: 2px solid rgba(54, 47, 106, 0.7);
+  }
+  .result-grid:nth-last-of-type(4) {
+    border-right: none;
+  }
+}
+
+.container-background {
+  position: sticky;
+}
+
+.nav-link a {
+  color: black;
+}
+
+.nav-link {
+  transition: color 1s ease;
+  color: #37306b;
+}
