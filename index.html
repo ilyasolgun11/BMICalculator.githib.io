@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="container-background bg-body-tertiary fixed-top">
@@ -45,7 +45,7 @@
                   <a class="nav-link" href="#section2">Result</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#section3">Formula</a>
+                  <a class="nav-link" href="#section3">Converter</a>
                 </li>
               </ul>
             </div>
@@ -71,26 +71,31 @@
           />
         </svg>
       </h1>
+
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 calc-contianer-style">
+          <p class="help-p text-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle-fill info" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>Use our <a class="converter-link" href="#converter-header">Converter</a> if you need help converting.</p>
           <div class="input-group mb-3 input-1-margin">
             <span class="input-group-text" id="inputGroup-sizing-default"
               >Height</span
             >
             <input
-              placeholder="&#x22;1.79 Meters&#x22;"
+              placeholder="&#x22;Meters&#x22; - only use numbers"
               type="text"
               class="form-control height--input"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
             />
           </div>
+          
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default"
               >Weight</span
             >
             <input
-              placeholder="&#x22;65kg&#x22;"
+              placeholder="&#x22;KG&#x22; - only use numbers"
               type="text"
               class="form-control weight--input"
               aria-label="Sizing example input"
@@ -106,6 +111,7 @@
             </button>
           </div>
         </div>
+        
         <div class="col-md-6">
           <div class="container output-container">
             <h4 class="result-header">Result:</h4>
@@ -149,32 +155,77 @@
           </h5>
         </div>
       </div>
-      <h3 class="display-3 formula-header text-center">Formula Calculation</h3>
-      <div class="row formula-container">
-        <div class="col-md-6">
-          <div class="formula-calc-1">
-            <h3 class="display-3 formula-step-header">Step 1:</h3>
-            <h3 class="formula-style">
-              Height:
-              <small class="text-muted">1.79 meters</small>
-            </h3>
-            <h3>
-              Weight:
-              <small class="text-muted">65kg</small>
-            </h3>
+
+      <h2 id="converter-header" class="convert-header text-center">Converter</h2>
+      <div class="row">
+        <div class="col-lg-4">
+      <div class="row meter-converter-container">
+        <h2 class="feet-to-meters-header text-center">Foot to Meters</h2>
+        <div class="col-sm-6">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Ft</span>
+            <input type="text" class="form-control ft-mtr" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;5&#34;">
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="formula-calc">
-            <h3 class="display-3 formula-step-header">Step 2:</h3>
-
-            <h3>1&#41; 1.79 * 1.79</h3>
-            <h3>2&#41; 65 / 3.2</h3>
-            <h3>3&#41; = 20</h3>
+        <div class="col-sm-6">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Inch</span>
+            <input type="text" class="form-control inch-mtr" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;10&#34;">
           </div>
+        </div>
+        
+        <div class="col-sm-12">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Meters: </span>
+            <input type="text" class="form-control ft-mtr-result" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;1.78&#34;" readonly>
+          </div>
+          <button type="button" class="btn btn-primary ft-mtr-btn">Convert</button>
         </div>
       </div>
     </div>
+    <div class="col-lg-4">
+      <div class="row meter-converter-container">
+        <h2 class="cm-to-meters-header text-center">CM to Meters</h2>
+        <div class="col-sm-12">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Centimeters</span>
+            <input type="text" class="form-control cm-mtr" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;178&#34;">
+          </div>
+        </div>
+        
+        
+        <div class="col-sm-12">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Meters: </span>
+            <input type="text" class="form-control cm-mtr-result" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;1.78&#34;" readonly>
+          </div>
+          <button type="button" class="btn btn-primary cm-mtr-btn">Convert</button>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-4">
+      <div class="row kg-converter-container">
+        <h2 class="lb-to-kg-header text-center">LB  to  KG</h2>
+        <div class="col-sm-12">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">LB</span>
+            <input type="text" class="form-control pounds-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;143&#34;">
+          </div>
+        </div>
+        
+        
+        <div class="col-sm-12">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">KG: </span>
+            <input type="text" class="form-control kg-output" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="&#34;65&#34;" readonly>
+          </div>
+          <button type="button" class="btn btn-primary lb-kg-btn">Convert</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+ 
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -182,3 +233,4 @@
     <script defer src="app.js"></script>
   </body>
 </html>
+
