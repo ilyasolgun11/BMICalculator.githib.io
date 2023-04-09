@@ -35,6 +35,8 @@ h1 {
   font-family: "Golos Text", sans-serif;
 }
 
+
+
 .bi-calculator {
   padding-left: 10px;
   width: 55px;
@@ -45,6 +47,20 @@ h1 {
   color: #37306b;
   padding-top: 20px;
   font-family: "Golos Text", sans-serif;
+}
+
+.btn-group-container {
+  width: 100%;
+}
+
+.calc-contianer-style {
+  margin-bottom: 40px;
+}
+
+.meter,
+.foot,
+.centimeter {
+  background-color: #37306b;
 }
 
 .input-1-margin {
@@ -72,7 +88,26 @@ h1 {
 }
 
 .btn:hover {
-  animation: bg-animate 0.7s infinite alternate;
+  animation: bg-animate 0.7s alternate;
+  animation-fill-mode: forwards;
+}
+
+.help-p {
+  font-size: 0.9rem;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.converter-link {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #37306b;
+  font-weight: 600;
+}
+
+.info {
+  margin-right: 7px;
+  color: #37306b;
 }
 
 .result-header {
@@ -148,41 +183,47 @@ h1 {
   padding-bottom: 28px;
 }
 
-.formula-header {
-  padding-top: 60px;
-  color: #3a3277;
-  font-family: "Golos Text", sans-serif;
-  font-size: 3.5rem;
+
+.convert-header {
+  margin: 50px 0px 20px 0px;
+  font-size: 3rem;
+  font-weight: 600;
   color: transparent;
   background-clip: text;
   background-image: var(--gradient);
   background-size: 500%;
-  animation: bg-animate 3s infinite alternate;
+  animation: bg-animate 5s infinite alternate;
 }
 
-.formula-step-header {
-  font-weight: 300;
+
+
+.feet-to-meters-header, .cm-to-meters-header, .lb-to-kg-header {
+  font-size: 2.2rem;
+  margin: 30px 0px 20px 0px;
 }
 
-.formula-style {
-  padding-top: 20px;
+.ft-mtr-btn, .cm-mtr-btn, .lb-kg-btn {
+  width: 100%;
 }
 
-.formula-calc {
-  padding: 10px 0px 15px 15px;
-  background-color: rgba(104, 104, 104, 0.1);
-  border-radius: 7px;
+.cm-mtr-btn, .ft-mtr-btn, .lb-kg-btn {
+  margin-bottom: 50px;
 }
 
-.formula-calc-1 {
-  padding-bottom: 30px;
-  background-color: none;
+.kg-header {
+  margin-left: 10px;
 }
 
-.formula-container {
-  margin-top: 20px;
-  margin-bottom: 70px;
+.pounds, .kg {
+  color: rgb(100, 100, 100);
+  font-size: 0.8rem;
 }
+
+.pounds {
+  margin-right: 10px;
+}
+
+
 
 @media only screen and (max-width: 765px) {
   .result-grid:nth-last-of-type(1) {
@@ -199,6 +240,17 @@ h1 {
   .result-grid:nth-last-of-type(4) {
     border-right: none;
   }
+  .container-fluid ul li {
+    border-bottom: 1px solid rgb(198, 198, 198);
+  }
+  .container-fluid ul li:nth-child(1) {
+
+    padding-top: 20px;
+  }
+  .container-fluid ul li:nth-child(3) {
+    border-bottom: none;
+    padding-bottom: 20px;
+  }
 }
 
 .container-background {
@@ -212,4 +264,24 @@ h1 {
 .nav-link {
   transition: color 1s ease;
   color: #37306b;
+}
+
+@media screen and (min-width: 700px) {
+  .meter-converter-container, .kg-converter-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .result-output {
+    font-size: 5rem;
+  }
+  .calc-contianer-style {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .result-output {
+    padding-top: 30px;
+    font-size: 5rem;
+  }
 }
